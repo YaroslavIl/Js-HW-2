@@ -60,18 +60,20 @@ while (revers) {
 // **
 // **
 
-let height = prompt('Введіть значення висорти:');
 let width = prompt('Введіть значення ширини:');
+let height = prompt('Введіть значення висорти:');
 let widthR = ' ';
 let heightR = ' ';
-for (i = 0; i < width; i++) {
+for (i = 0; i <= width; i++) {
     widthR = widthR + '*';
+    if (i == width) {
+        for (y = 0; y < height; y++) {
+            console.log(widthR);
+            console.log(heightR);
+        }
+    }
 }
 
-for (y = 0; y < height; y++) {
-    console.log(heightR);
-    console.log(widthR);
-}
 
 
 // - напишіть змінні які питають логін та пароль з prompt  якщо логін admin і пароль 12345 вірні то виводити повідомлення "вітаємо в системі" якщо ні то виводити "Пароль логін не вірні"
